@@ -1,0 +1,1083 @@
+{
+  "id": "5c262c93-7eb1-437f-aa6c-3d766bc8b677",
+  "version": "2.0",
+  "name": "1Klimrek Tests",
+  "url": "https://localhost:5001",
+  "tests": [{
+    "id": "5573cfaf-57d6-4f67-a84d-fb3e853013b0",
+    "name": "Login success consulent",
+    "commands": [{
+      "id": "e99380da-fb60-458c-b998-60d69300264f",
+      "comment": "",
+      "command": "open",
+      "target": "/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0c75f03-279a-40f8-b379-90fe6ed67ba2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba9f01ef-c9aa-49db-b0f8-f72e2f38d4bd",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ConsulentMail"
+    }, {
+      "id": "0929facf-f924-44d7-a8fb-2de20b5322f8",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"password\"]",
+      "targets": [
+        ["id=Input_Password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#Input_Password", "css:finder"],
+        ["xpath=//input[@id='Input_Password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "ConsulentPass"
+    }, {
+      "id": "e996aee9-796b-4e59-ade4-24266de5a157",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#account button[type=\"submit\"]:not([form])",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='buttonrow']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d91803fa-df2f-497a-95dd-3333966df6eb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[@href=\"/Manage\" and contains(., \"ConsulentMail\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4414fa1-bdd3-47f0-918c-30387dd74984",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Homepage consultant - Klimrek",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "548c34bc-9814-4123-9b79-5fa2f42577f3",
+    "name": "Login success admin",
+    "commands": [{
+      "id": "edc61f04-0b49-4af2-8edc-bbf52bbdf6d6",
+      "comment": "",
+      "command": "open",
+      "target": "/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00dff84a-88a2-486c-9e38-f0b22fe4b388",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e56103b-c2be-4959-8b9d-658a796d84c1",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "AdminMail"
+    }, {
+      "id": "805e174f-1513-4403-a66b-6e6959d7adaf",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"password\"]",
+      "targets": [
+        ["id=Input_Password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#Input_Password", "css:finder"],
+        ["xpath=//input[@id='Input_Password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "AdminPass"
+    }, {
+      "id": "a1d6cb09-9f5c-411d-b8f0-984e62dc77ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#account button[type=\"submit\"]:not([form])",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='buttonrow']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abddc2cf-1079-4488-acee-53e13925d195",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[@href=\"/Manage\" and contains(translate(.,'ABCDEFGHIJKLOMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'), \"AdminMail\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12b2ac32-bea9-4948-bf13-8383ec9ece23",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Homepage admin - Klimrek",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "272a6c57-768f-4970-ba50-a738d7526642",
+    "name": "Login success boer",
+    "commands": [{
+      "id": "a3c3b39b-f869-4fe5-9ee0-57ed0a42ffba",
+      "comment": "",
+      "command": "open",
+      "target": "/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f10c16e-9a06-4086-a6de-36ca906370a6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "427bce53-4cf0-46ef-9ae6-6db52baffce3",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "BoerMail"
+    }, {
+      "id": "ad9987d7-b32b-422a-8ba3-66b2d9eb4477",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"password\"]",
+      "targets": [
+        ["id=Input_Password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#Input_Password", "css:finder"],
+        ["xpath=//input[@id='Input_Password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "BoerPass"
+    }, {
+      "id": "5d4907a4-f171-4de1-a5d8-b2f927444618",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#account button[type=\"submit\"]:not([form])",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='buttonrow']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b24dcdbe-78e0-4351-bf52-53a5962c193f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[@href=\"/Manage\" and contains(., \"BoerMail\")]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b92e2cff-50dc-44b2-bbf8-00b89c63f4ea",
+    "name": "Login validation errors",
+    "commands": [{
+      "id": "19391bfc-f1a2-4ba2-90fa-686c130518c2",
+      "comment": "",
+      "command": "open",
+      "target": "/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "261b135b-26d7-4485-a8de-954061da9976",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [],
+      "value": "a"
+    }, {
+      "id": "68409a5b-a16f-4370-8289-bea4194f16fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=body",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "679a89aa-61c2-45c9-9553-79bc6cd53d51",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=form#account span.field-validation-error #Input_Email-error",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "fa4e65e3-cf63-4710-ad31-a760b806a2d7",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [],
+      "value": "valid@mail.com"
+    }, {
+      "id": "6b11a550-de61-4ec2-ae65-c4644fa641f6",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"password\"]",
+      "targets": [],
+      "value": "Testpass1!"
+    }, {
+      "id": "45f983ad-ddfc-42aa-bac8-72408acdfcf9",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#account button[type=\"submit\"]:not([form])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eafb0439-6be7-45ba-9a28-7c47ab2e7825",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div.validation-summary-errors",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "51930bf0-b1c1-4152-ad68-5ea87dcf090a",
+    "name": "Logout success",
+    "commands": [{
+      "id": "fe6a2b59-0fe5-4b06-80b4-68affcd66263",
+      "comment": "",
+      "command": "open",
+      "target": "/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6bfa6eda-0291-4d75-ac85-6832f07b2a53",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05940e2e-dc61-40a3-9ac1-ca44dfb851cd",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ConsulentMail"
+    }, {
+      "id": "0bd1c252-0200-4b0c-bb18-e2de4e2dde39",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"password\"]",
+      "targets": [
+        ["id=Input_Password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#Input_Password", "css:finder"],
+        ["xpath=//input[@id='Input_Password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "ConsulentPass"
+    }, {
+      "id": "b8de7913-9cf1-4945-a57b-c30e01e974bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#account button[type=\"submit\"]:not([form])",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='buttonrow']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6f1c4ab-91be-41a5-8a78-5269de042071",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[@href=\"/Manage\" and contains(., \"ConsulentMail\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f68bd94f-b9de-4556-a301-f47c40bb320a",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Homepage consultant - Klimrek",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16f9477c-55c9-4e98-8563-2d4e0608da33",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item > form > button[type=\"submit\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8427f0f-4156-48b6-b326-e8df3e4c5d41",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Login - Klimrek",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a86820dd-aa7c-4f4a-aa29-e9f6e419690a",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=a[href=\"/Manage\"]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ea557a3f-9386-4c6a-8795-432cf9550ce3",
+    "name": "Can change role",
+    "commands": [{
+      "id": "374d7d0d-9134-4aba-88dc-11b2379c992b",
+      "comment": "",
+      "command": "open",
+      "target": "/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62b3676b-b84b-4692-8596-c8b289012dbe",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [],
+      "value": "AdminMail"
+    }, {
+      "id": "8717d4d9-6a31-48b0-9181-334fef823597",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"password\"]",
+      "targets": [],
+      "value": "AdminPass"
+    }, {
+      "id": "e78e88bb-e3b0-46bf-985a-393f49b0702b",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#account button[type=\"submit\"]:not([form])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8193995-dfd7-430e-9a3f-39170ca53e55",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href=\"/Home/Users\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba31ab46-9a8a-4f24-8a42-72559f68311f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//tr[contains(., \"ConsulentMail\")]//a[contains(@class, \"btn-outline-danger\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52a972e9-4072-4cff-9500-9afb64e9437e",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=(//table[contains(@class, \"usertable\")])[2]//tr[contains(., \"ConsulentMail\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e93e18ed-210b-4102-ac92-d1ecdaf7fb96",
+      "comment": "",
+      "command": "select",
+      "target": "//div[contains(@class,\"bootstrap-table\")]//tr[contains(.,\"ConsulentMail\")]//select[@name=\"u.Rol\"]",
+      "targets": [],
+      "value": "Landbouwer"
+    }, {
+      "id": "6932de5a-dd3a-4b5b-a2d3-63da5e7fb782",
+      "comment": "",
+      "command": "click",
+      "target": "//div[contains(@class,\"bootstrap-table\")]//tr[contains(.,\"ConsulentMail\")]//a[contains(@class,\"btn-success\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9d120b2-7fcc-47ef-961c-7ac677c11c09",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//tr[contains(.,'ConsulentMail')]//td[5]",
+      "targets": [],
+      "value": "Landbouwer"
+    }, {
+      "id": "89183e06-2326-4cba-bbfb-61c56a3edf90",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//tr[contains(., \"ConsulentMail\")]//a[contains(@class, \"btn-outline-danger\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fd17b9d-d4ec-4b3a-8512-b4b164d01c9a",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=(//table[contains(@class, \"usertable\")])[2]//tr[contains(., \"ConsulentMail\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f17e8980-219f-48b0-9dc7-1c93a7ba897d",
+      "comment": "",
+      "command": "select",
+      "target": "//div[contains(@class,\"bootstrap-table\")]//tr[contains(.,\"ConsulentMail\")]//select[@name=\"u.Rol\"]",
+      "targets": [],
+      "value": "Consulent"
+    }, {
+      "id": "da4fdd1b-eb80-4cfb-aebc-8b6092c916d4",
+      "comment": "",
+      "command": "click",
+      "target": "//div[contains(@class,\"bootstrap-table\")]//tr[contains(.,\"ConsulentMail\")]//a[contains(@class,\"btn-success\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d4cbf97-4fd7-4c16-8af1-19c918086594",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//tr[contains(.,'ConsulentMail')]//td[5]",
+      "targets": [],
+      "value": "Consulent"
+    }]
+  }, {
+    "id": "1b371bda-cf0e-4b14-abde-4fe43b6abc61",
+    "name": "Can change org",
+    "commands": [{
+      "id": "0d3e258e-decf-466d-94d3-3460bf127597",
+      "comment": "",
+      "command": "open",
+      "target": "/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2442455c-1862-417a-b23b-4d4cb1dd16cb",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [],
+      "value": "AdminMail"
+    }, {
+      "id": "9b5d5331-a752-42c9-8bcf-4f656178d7cd",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"password\"]",
+      "targets": [],
+      "value": "AdminPass"
+    }, {
+      "id": "cd9f49c3-4fa3-472d-9634-75b0ed976bc1",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#account button[type=\"submit\"]:not([form])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6905f98f-d0b9-4d60-9d72-6b512182d423",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href=\"/Home/Users\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "efccb9f2-7989-40c6-8133-c52f29ebb56f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//tr[contains(., \"ConsulentMail\")]//a[@class=\"detail-icon\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a1eea08-2cb5-40b0-81ee-36292abb6420",
+      "comment": "",
+      "command": "select",
+      "target": "name=Organisatie",
+      "targets": [
+        ["name=Organisatie", "name"],
+        ["css=.form-control:nth-child(6)", "css:finder"],
+        ["xpath=//select[@name='Organisatie']", "xpath:attributes"],
+        ["xpath=//form[@id='Detail474b7816-5c59-4b81-83f9-262c59207da0']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "Innovatiesteunpunt"
+    }, {
+      "id": "d6c9061c-623f-47a1-9194-4bbe195f29bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(7)",
+      "targets": [
+        ["css=.btn:nth-child(7)", "css:finder"],
+        ["xpath=//input[@value='Edit']", "xpath:attributes"],
+        ["xpath=//form[@id='Detailf5c678ab-4923-425e-a25c-7fa74518e6cf']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d33cd95-e3b3-43e4-aa22-28e698597a93",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//tr[contains(., \"ConsulentMail\")]//td[4]",
+      "targets": [],
+      "value": "Innovatiesteunpunt"
+    }, {
+      "id": "f5e66226-d9ca-4e1b-a3ec-32f8c5464587",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//tr[contains(., \"ConsulentMail\")]//a[@class=\"detail-icon\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3bee731-04e3-436e-a2e3-4d1fa82d4d79",
+      "comment": "",
+      "command": "select",
+      "target": "name=Organisatie",
+      "targets": [],
+      "value": "ILVO"
+    }, {
+      "id": "31a04b80-ed9b-40ba-a488-b6d1bbea5e6e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(7)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86377bf6-845a-4e79-843e-c62a26b011ab",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//tr[contains(., \"ConsulentMail\")]//td[4]",
+      "targets": [],
+      "value": "ILVO"
+    }]
+  }, {
+    "id": "8f3ae615-74f6-47fc-b625-fbd40b5a2916",
+    "name": "Empty field warnings",
+    "commands": [{
+      "id": "cbfd49d5-6f8b-4f16-8c0d-c6f55460eec9",
+      "comment": "",
+      "command": "open",
+      "target": "/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "018b7d48-5537-4002-baff-2e8704b4c8b5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c720142-f225-4611-a97f-5b21810e89dd",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ConsulentMail"
+    }, {
+      "id": "f9540b2c-97f9-4ae5-b162-f5ab2276fb5e",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"password\"]",
+      "targets": [
+        ["id=Input_Password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#Input_Password", "css:finder"],
+        ["xpath=//input[@id='Input_Password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "ConsulentPass"
+    }, {
+      "id": "a23dc39f-00c4-4e64-858f-097d8fff01ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#account button[type=\"submit\"]:not([form])",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='buttonrow']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c3192a2-4355-43af-83bf-34fd309c6597",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[@href=\"/Manage\" and contains(., \"ConsulentMail\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32dcae14-fd47-4d2b-8c4d-87be7012369f",
+      "comment": "",
+      "command": "click",
+      "target": "css=form[action=\"/Inputform\"] button[type=submit]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0e78b01-3320-48d2-8aaa-3d9d940a0b70",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#form input[type=\"button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a9e46f4-4735-4517-8e0c-db4716b9a067",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div.modal.show",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cf192428-8149-46a3-bbfd-5777f36585f9",
+    "name": "Create Consult",
+    "commands": [{
+      "id": "7acb883e-7fb9-453a-a323-33e61f9a33b9",
+      "comment": "",
+      "command": "open",
+      "target": "/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6685c4fc-08a3-4417-890e-37403eaa7852",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51e408f6-8780-48ea-8f8a-48c175ffcc54",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ConsulentMail"
+    }, {
+      "id": "e322c730-6f0d-4b47-a323-5a9d430698ac",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"password\"]",
+      "targets": [
+        ["id=Input_Password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#Input_Password", "css:finder"],
+        ["xpath=//input[@id='Input_Password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "ConsulentPass"
+    }, {
+      "id": "c46b3bef-dfd4-49a3-a018-9d041a71d085",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#account button[type=\"submit\"]:not([form])",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='buttonrow']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa595dea-3b3b-478b-a258-9fd674d1178d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[@href=\"/Manage\" and contains(., \"ConsulentMail\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b72746c0-d6e5-41e2-a3d9-78fcf90a0a10",
+      "comment": "",
+      "command": "open",
+      "target": "/Inputform/ClearTestData/0000000000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cadb7dd4-f59c-4782-8b2c-659634c4309a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e2d1fa0-03f4-4174-a7db-7fed1c03fda3",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//table[contains(.,\"0000000000\")]//tr",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d54b69c-0c21-4954-93f9-41f50f7f0f3a",
+      "comment": "",
+      "command": "click",
+      "target": "css=form[action=\"/Inputform\"] button[type=submit]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6816fd1f-77d4-4886-8156-0a46549c80d2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.getElementById(\"KBO\").value = \"0000000000\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e328968-b9f0-4854-934c-c354bf73fb98",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#form input[name=\"Boekhoudpakket\"]",
+      "targets": [],
+      "value": "Boekhoudpakket #1"
+    }, {
+      "id": "efedf613-81e3-4380-afc2-9768ef03e922",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#form input[name=\"Managementpakket\"]",
+      "targets": [],
+      "value": "Managementpakket #1"
+    }, {
+      "id": "b363bc50-6886-46cb-946b-8daf7a9bb432",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#form input[name=\"HasBioteelt\"][type=\"checkbox\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "488db488-da12-4e9f-b2e4-5c8aee954433",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#form input[name=\"NietBiologischeStromen\"]",
+      "targets": [],
+      "value": "Geen stromen beschikbaar op dit moment"
+    }, {
+      "id": "14a72902-6c12-4876-92db-d4aac462c7c5",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#form input[name=\"Jaartal\"]",
+      "targets": [],
+      "value": "2020"
+    }, {
+      "id": "512b86b0-9f2e-4303-9a73-e56221417c1a",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#form [name=\"OpmerkingenConsultAlgemeen\"]",
+      "targets": [],
+      "value": "Geen opmerkingen beschikbaar op dit moment"
+    }, {
+      "id": "0e752da6-e5f8-4686-9cce-c5ed8ff9b717",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#form input[type=\"button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6d18269-f3c2-423d-bb83-220a0c851179",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=form#form input[name=\"Boekhoudpakket\"]",
+      "targets": [],
+      "value": "Boekhoudpakket #1"
+    }, {
+      "id": "5322fa77-34d5-4b3f-8bd8-888c3ad06900",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=form#form input[name=\"Managementpakket\"]",
+      "targets": [],
+      "value": "Managementpakket #1"
+    }, {
+      "id": "b1604aa9-bec4-440d-81ea-7461304a0ac3",
+      "comment": "",
+      "command": "assertChecked",
+      "target": "css=form#form input[name=\"HasBioteelt\"][type=\"checkbox\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e110d777-a534-4a84-a3aa-83a05e52e847",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=form#form input[name=\"NietBiologischeStromen\"]",
+      "targets": [],
+      "value": "Geen stromen beschikbaar op dit moment"
+    }, {
+      "id": "af9d82d0-5cbe-4f7f-83e3-72dc33629548",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=form#form input[name=\"Jaartal\"]",
+      "targets": [],
+      "value": "2020"
+    }, {
+      "id": "a257949b-b308-4f7f-907e-309e9858b347",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=form#form [name=\"OpmerkingenConsultAlgemeen\"]",
+      "targets": [],
+      "value": "Geen opmerkingen beschikbaar op dit moment"
+    }, {
+      "id": "2f85e497-add4-41fc-9ff9-d4b2133f60b5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "306c8c6e-a58e-4218-ae95-e92797c09dfc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//table[contains(.,\"0000000000\")]//tr",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "15693956-1114-4862-9dd4-09133d38e3ac",
+    "name": "Create Consult Warning",
+    "commands": [{
+      "id": "509569b7-4f2e-404c-bbab-09287136576b",
+      "comment": "",
+      "command": "open",
+      "target": "/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6f40dde-20c4-4a58-8c4e-f299777968f5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8b51b3f-d481-4ade-86cb-0dd1acbacf90",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"email\"]",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ConsulentMail"
+    }, {
+      "id": "fbdb2969-f371-4f4a-9c4f-88c64fffcdfa",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#account input[type=\"password\"]",
+      "targets": [
+        ["id=Input_Password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#Input_Password", "css:finder"],
+        ["xpath=//input[@id='Input_Password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "ConsulentPass"
+    }, {
+      "id": "063acd35-ea57-49e3-b38b-f071f81bb869",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#account button[type=\"submit\"]:not([form])",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='buttonrow']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1fcccc6-bf7a-43bc-92d8-ddf9c5de366e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[@href=\"/Manage\" and contains(., \"ConsulentMail\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa8fd036-245d-406d-8091-7d34970c37cb",
+      "comment": "",
+      "command": "open",
+      "target": "/Inputform/ClearTestData/0000000000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2873f1d-5e62-445e-b71f-09acbf98e475",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a1af0bd-ccf7-48d0-9d69-eddc41bd8343",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//table[contains(.,\"0000000000\")]//tr",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03a47159-a437-4cf9-a94e-1b5a8aba7c06",
+      "comment": "",
+      "command": "click",
+      "target": "css=form[action=\"/Inputform\"] button[type=submit]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cdb8fad-b902-4afb-a4b6-d99d4af4a75b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.getElementById(\"KBO\").value = \"0000000000\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e7d9160-ec5f-4c6a-8555-477b78fc5f0b",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#form input[name=\"HasBioteelt\"][type=\"checkbox\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f752654f-5769-458c-a775-f2b74b4fe027",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#form input[name=\"NietBiologischeStromen\"]",
+      "targets": [],
+      "value": "Geen stromen beschikbaar op dit moment"
+    }, {
+      "id": "afe311b3-41b9-440e-958e-dbc8150abcea",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#form input[name=\"Jaartal\"]",
+      "targets": [],
+      "value": "2020"
+    }, {
+      "id": "f46532f1-f484-4297-b970-14cbd8e5d196",
+      "comment": "",
+      "command": "type",
+      "target": "css=form#form [name=\"OpmerkingenConsultAlgemeen\"]",
+      "targets": [],
+      "value": "Geen opmerkingen beschikbaar op dit moment"
+    }, {
+      "id": "45453c6b-df5e-43d4-8d54-f7aefd4485a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=form#form input[type=\"button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4f6bfa2-1d44-4371-a5eb-de539c492a5f",
+      "comment": "",
+      "command": "click",
+      "target": "css=div.modal.show button[name=\"submit\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5faf396e-c8e1-467a-9d57-90780c305983",
+      "comment": "",
+      "command": "assertChecked",
+      "target": "css=form#form input[name=\"HasBioteelt\"][type=\"checkbox\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5424c6b9-5c87-4cd6-917a-8c88a21f5651",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=form#form input[name=\"NietBiologischeStromen\"]",
+      "targets": [],
+      "value": "Geen stromen beschikbaar op dit moment"
+    }, {
+      "id": "db02818c-c6e0-4754-8286-5466f6454c47",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=form#form input[name=\"Jaartal\"]",
+      "targets": [],
+      "value": "2020"
+    }, {
+      "id": "184f54d3-a69d-4579-a70a-fa2441be9208",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=form#form [name=\"OpmerkingenConsultAlgemeen\"]",
+      "targets": [],
+      "value": "Geen opmerkingen beschikbaar op dit moment"
+    }, {
+      "id": "67788334-a534-447f-add0-f192328cff05",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0d03491-4253-446e-9684-22660c1cdeaa",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//table[contains(.,\"0000000000\")]//tr",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "67c90716-75cb-4e9b-993c-104e18e32268",
+    "name": "Login Tests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["548c34bc-9814-4123-9b79-5fa2f42577f3", "272a6c57-768f-4970-ba50-a738d7526642", "5573cfaf-57d6-4f67-a84d-fb3e853013b0", "b92e2cff-50dc-44b2-bbf8-00b89c63f4ea", "51930bf0-b1c1-4152-ad68-5ea87dcf090a"]
+  }, {
+    "id": "9ed8990d-d32d-44bb-9c0e-f919ebc013b3",
+    "name": "UserTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ea557a3f-9386-4c6a-8795-432cf9550ce3", "1b371bda-cf0e-4b14-abde-4fe43b6abc61"]
+  }, {
+    "id": "b354cd25-a2da-4830-abde-329b59d3579a",
+    "name": "Consult Tests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cf192428-8149-46a3-bbfd-5777f36585f9", "15693956-1114-4862-9dd4-09133d38e3ac", "8f3ae615-74f6-47fc-b625-fbd40b5a2916"]
+  }],
+  "urls": ["https://localhost:5001/", "https://localhost:5001/Login"],
+  "plugins": []
+}
